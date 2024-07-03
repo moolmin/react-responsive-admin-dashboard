@@ -20,7 +20,7 @@
 //  --smallestFontSize: .75rem;
 //}
 
-.sideBar{
+.sideBar {
   background: var(--whiteColor);
   box-shadow: 1px 0px 4px var(--greyText);
   width: 18%;
@@ -28,11 +28,11 @@
   gap: 3rem;
   overflow: auto;
 
-  .logoDiv{
+  .logoDiv {
     padding: 1.5rem 1.5rem 0;
     cursor: pointer;
 
-    img{
+    img {
       max-width: 140px;
       margin-right: .5rem;
       background: var(--inputColor);
@@ -41,20 +41,20 @@
     }
   }
 
-  .menuDiv, .settingsDiv{
-    .divTitle{
+  .menuDiv, .settingsDiv {
+    .divTitle {
       font-size: var(--h3FontSize);
       color: var(--blackColor);
       padding: 0 1.5rem 1.5rem;
     }
 
-    .menuLists{
-      .listItem{
+    .menuLists {
+      .listItem {
         padding: .2rem 1.5rem;
         width: 100%;
         position: relative;
 
-        &::before{
+        &::before {
           position: absolute;
           content: '';
           height: 0%;
@@ -67,22 +67,54 @@
           transition: height 0.3s ease;
         }
 
-        .menuLink{
+        .menuLink {
           color: var(--greyText);
           font-weight: 500;
-          .icon{
+
+          .icon {
             margin-right: .5rem;
           }
         }
 
-        &:hover .menuLink{
+        &:hover .menuLink {
           color: var(--PrimaryColor);
           transition: color 0.3s;
         }
 
-        &:hover::before{
+        &:hover::before {
           height: 100%;
         }
+      }
+    }
+  }
+
+  .sideBar {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+
+    .sideBarCard {
+      position: relative;
+      padding: 1rem;
+      background: var(--HoverColor);
+
+      .icon {
+        position: absolute;
+        background: var(--HoverColor);
+        border: 10px solid var(--whiteColor);
+        font-size: 3rem;
+        border-radius: 50%;
+        top: -8px;
+        right: 50%;
+        transform: translate(50%);
+        z-index: 100;
+      }
+
+      .cardContent {
+        position: relative;
+        padding: 1rem;
+        background: var(--HoverColor);
       }
     }
   }
